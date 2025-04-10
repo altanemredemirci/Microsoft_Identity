@@ -13,5 +13,6 @@ namespace Mico.Models
         public string Password { get; set; }
 
         public bool IsPersient { get; set; }
-    }
+
+    }      
 }
