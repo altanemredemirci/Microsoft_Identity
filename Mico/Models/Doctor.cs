@@ -1,4 +1,6 @@
-﻿namespace Mico.Models
+﻿
+
+namespace Mico.Models
 {
     public class Doctor
     {
