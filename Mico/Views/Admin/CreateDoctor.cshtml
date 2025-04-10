@@ -1,0 +1,45 @@
+﻿@model Doctor
+@{
+    ViewData["Title"] = "CreateDoctor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <!--row 12 eşit kolondan oluşur-->
+        <div class="col-3"></div>
+
+        <div class="col-6">           
+            <form asp-action="CreateDoctor" asp-controller="Admin"  method="post">              
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" placeholder="Adınız..">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Branch"></label>
+                    <input asp-for="Branch" class="form-control" placeholder="Branşınız..">
+                    <span asp-validation-for="Branch" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" placeholder="Email Adresiniz..">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" class="form-control" placeholder="Şifre...">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>                
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            </form>
+        </div>
+        <div class="col-3"></div>
+
+    </div>
+</div>
+
+
