@@ -187,7 +187,7 @@
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                      
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
@@ -209,11 +209,19 @@
                                         <p>Branşlar</p>
                                     </a>
                                 </li>
-                              
+
 
                             </ul>
                         </li>
-                        
+                        <li class="nav-item">
+                            <a href="/Doctor/Index" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Doktorlar
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -223,7 +231,9 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-         @RenderBody()
+            <div class="container">
+                @RenderBody()
+            </div>
         </div>
         <!-- /.content-wrapper -->
 
@@ -247,6 +257,6 @@
     <script src="~/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="~/admin/dist/js/adminlte.min.js"></script>
- 
+
 </body>
 </html>

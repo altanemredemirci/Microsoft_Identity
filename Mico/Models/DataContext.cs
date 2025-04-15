@@ -1,6 +1,7 @@
 ﻿using Mico.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace Mico.Models
 {
@@ -28,6 +29,15 @@ namespace Mico.Models
         //    .HasAnnotation("Display", "Doktor Adı"); //Name özelliği kullanıcıya görünür de 'Doktor Adı' olarak gösterilecek
         //    //.HasColumnOrder(2) //Name kolonunun tablodaki sırası         
         //}
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<Branch>()
+                .Property(b => b.Code)
+                .HasAnnotation("DisplayName", "Kısa Kod");
+        }
 
 
         public DbSet<Doctor> Doctors { get; set; }

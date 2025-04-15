@@ -10,6 +10,11 @@ namespace Mico.Models
         public string Surname { get; set; }
         public string Branch { get; set; }
         public List<SocialMedia> SocialMedias { get; set; }
+
+        //public Doctor()
+        //{
+        //    SocialMedias = new List<SocialMedia>();
+        //}
     }
     
 
